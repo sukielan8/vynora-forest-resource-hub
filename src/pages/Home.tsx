@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowDown, BookOpen, Calendar, Mail, Users, Shield, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -95,6 +94,13 @@ const Home = () => {
     }
   ];
 
+  const scrollToContent = () => {
+    const nextSection = document.getElementById('core-mission');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -113,10 +119,13 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-semibold text-white mb-6 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-semibold text-white mb-2 animate-fade-in">
+            Vynora
+          </h1>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium text-secondary mb-6 animate-fade-in">
             Where Computer Science
             <span className="block text-secondary">Meets Healthcare</span>
-          </h1>
+          </h2>
           <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up">
             Discover comprehensive resources for the intersection of technology and medicine. 
             From AI applications to pre-med programming guides.
@@ -128,7 +137,7 @@ const Home = () => {
                 Explore Resources
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 transition-all duration-300 hover:scale-105">
+            <Button asChild variant="outline" size="lg" className="border-secondary text-secondary hover:bg-secondary/20 transition-all duration-300 hover:scale-105">
               <Link to="/about">
                 Learn About Vynora
               </Link>
@@ -137,13 +146,16 @@ const Home = () => {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-white/60" />
-        </div>
+        <button 
+          onClick={scrollToContent}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce transition-all duration-300 hover:scale-110"
+        >
+          <ArrowDown className="h-6 w-6 text-white/60 hover:text-white/80" />
+        </button>
       </section>
 
       {/* Core Mission Section */}
-      <section className="py-16 bg-white">
+      <section id="core-mission" className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-6">
             Our Core Mission

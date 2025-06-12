@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300">
             <img 
               src="/lovable-uploads/697238ab-ee46-4ce9-95dd-8a5cb8a8c449.png" 
               alt="Vynora Logo" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
@@ -36,7 +36,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-all duration-300 hover:text-primary relative group ${
+                className={`text-base font-medium transition-all duration-300 hover:text-primary relative group ${
                   isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
                 }`}
               >
