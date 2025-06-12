@@ -134,7 +134,7 @@ const Contact = () => {
                     project deadlines.
                   </p>
                 </CardContent>
-              </Car>
+              </Card>
             </div>
 
             {/* Right Side - Contact Form */}
