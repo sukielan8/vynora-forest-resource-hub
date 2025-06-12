@@ -26,7 +26,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/697238ab-ee46-4ce9-95dd-8a5cb8a8c449.png" 
               alt="Vynora Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
@@ -36,7 +36,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-base font-medium transition-all duration-300 hover:text-primary relative group ${
+                className={`text-lg font-medium transition-all duration-300 hover:text-primary relative group ${
                   isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
                 }`}
               >

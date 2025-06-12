@@ -182,7 +182,7 @@ const Articles = () => {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="py-12 bg-secondary/20">
+      <section className="py-12 bg-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-heading font-semibold text-primary mb-4">
@@ -194,15 +194,15 @@ const Articles = () => {
             <Card className="hover-lift border-0 shadow-sm bg-white transition-all duration-300">
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop"
                   alt="Health Habit Tracker"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                  <span className="bg-secondary/40 text-secondary-foreground px-2 py-1 rounded-full font-medium">
-                    Python & ML
+                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                    Coming Soon
                   </span>
                 </div>
                 <CardTitle className="text-lg font-heading">Health Habit Tracker</CardTitle>
@@ -224,8 +224,8 @@ const Articles = () => {
               </div>
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                  <span className="bg-secondary/40 text-secondary-foreground px-2 py-1 rounded-full font-medium">
-                    Coursework
+                  <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+                    In Progress
                   </span>
                 </div>
                 <CardTitle className="text-lg font-heading">Intro to AI in Medicine</CardTitle>
@@ -247,8 +247,8 @@ const Articles = () => {
               </div>
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                  <span className="bg-secondary/40 text-secondary-foreground px-2 py-1 rounded-full font-medium">
-                    Pre-Med
+                  <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full font-medium">
+                    Planning
                   </span>
                 </div>
                 <CardTitle className="text-lg font-heading">CS for Future Doctors</CardTitle>
