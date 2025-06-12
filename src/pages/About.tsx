@@ -1,123 +1,132 @@
 
-import { Users, BookOpen, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const About = () => {
-  const values = [
+  const coreValues = [
     {
-      icon: "🎯",
-      title: "Precision",
-      description: "We provide accurate, evidence-based resources that bridge theoretical knowledge with practical application."
+      icon: "🌿",
+      title: "Access",
+      description: "Health and tech knowledge for everyone"
     },
     {
-      icon: "🌱",
-      title: "Growth",
-      description: "We foster continuous learning and adaptation in the rapidly evolving landscape of healthcare technology."
+      icon: "⚡",
+      title: "Innovation", 
+      description: "Practical, creative solutions"
     },
     {
-      icon: "🤝",
-      title: "Collaboration",
-      description: "We believe in the power of interdisciplinary collaboration to solve complex healthcare challenges."
+      icon: "🎓",
+      title: "Education",
+      description: "Learn by building, teach by sharing"
     },
     {
-      icon: "🔬",
-      title: "Innovation",
-      description: "We champion innovative approaches that push the boundaries of what's possible in medical technology."
+      icon: "🔒",
+      title: "Anonymity",
+      description: "Work matters more than names"
+    },
+    {
+      icon: "👁️",
+      title: "Transparency",
+      description: "Open and trackable progress"
     }
   ];
 
-  const team = [
+  const differentiators = [
     {
-      role: "Research Contributors",
-      description: "Anonymous researchers and practitioners contributing cutting-edge insights from academia and industry.",
-      icon: "👥"
+      title: "Anonymous & Proud",
+      description: "We prove that impact matters more than credentials, age, or recognition. Our work speaks for itself."
     },
     {
-      role: "Content Curators",
-      description: "Specialists ensuring the quality and relevance of our educational materials and resources.",
-      icon: "📝"
+      title: "Built From Scratch",
+      description: "Everything we create is original, thoughtful, and designed specifically for our community's needs."
     },
     {
-      role: "Technical Reviewers",
-      description: "Experienced professionals validating the accuracy and applicability of our technical content.",
-      icon: "🔍"
+      title: "Student-Focused",
+      description: "Our content is written for students, not specialists. We make complex topics accessible and engaging."
+    },
+    {
+      title: "Impact Over Numbers",
+      description: "We don't chase metrics or followers. We chase usefulness, quality, and real-world impact."
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "Who runs Vynora?",
+      answer: "We're two high school students with big ambitions and small egos. One of us loves tech. One of us loves medicine. Together, we build Vynora."
+    },
+    {
+      question: "Can I join or collaborate?",
+      answer: "Not yet — but we may open volunteer opportunities later this year. For now, follow our work and reach out through our contact page if you have ideas or questions."
+    },
+    {
+      question: "Is your content trustworthy?",
+      answer: "We don't give medical advice, but we always cite credible sources, peer-reviewed journals, and verified public datasets. We focus on education and accessibility, not diagnosis or treatment."
+    },
+    {
+      question: "Why stay anonymous?",
+      answer: "Anonymity proves that good ideas and impactful work matter more than age, credentials, or personal branding. We want our content to be judged on its merit, not our backgrounds."
+    },
+    {
+      question: "How do you fund your work?",
+      answer: "Currently, Vynora is entirely self-funded and volunteer-run. We keep costs minimal and focus on creating value rather than generating revenue."
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-heading font-semibold text-primary mb-6">
-            Our Mission
+          <h1 className="text-4xl sm:text-5xl font-heading font-semibold mb-6">
+            About Vynora
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Vynora exists to bridge the gap between computer science and healthcare, 
-            providing comprehensive resources for students, researchers, and professionals 
-            at the intersection of technology and medicine.
+          <p className="text-xl leading-relaxed opacity-90">
+            Where anonymous innovation meets healthcare transformation
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Who We Are */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-heading font-semibold text-primary mb-4">
-                  What We Do
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  We curate and create high-quality educational content that helps students navigate 
-                  the complex intersection of computer science and healthcare. Our resources span 
-                  from fundamental programming concepts for pre-med students to advanced AI applications 
-                  in clinical settings.
+            <div>
+              <h2 className="text-3xl font-heading font-semibold text-primary mb-6">
+                Who We Are
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Vynora is a nonprofit initiative led by two students — one passionate about computer science, the 
+                  other about medicine. We stay anonymous to prove that anyone, regardless of age or 
+                  background, can build something real and impactful.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through carefully researched articles, practical guides, and cutting-edge insights, 
-                  we empower the next generation of healthcare technologists to make meaningful 
-                  contributions to human health and wellbeing.
+                <p>
+                  Our work lives at the intersection of health and technology, and we believe that by combining 
+                  these fields, we can create tools and resources that make a meaningful difference.
                 </p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-heading font-semibold text-primary mb-4">
-                  Our Vision
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We envision a future where technology and healthcare are seamlessly integrated, 
-                  where computational approaches enhance human health outcomes, and where the next 
-                  generation of medical professionals are equipped with both clinical expertise 
-                  and technological fluency.
+                <p>
+                  We don't chase credentials or recognition. We chase usefulness and impact, proving that 
+                  curiosity, code, and care are all you need to make a difference.
                 </p>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="bg-secondary/10 rounded-2xl p-8 relative overflow-hidden">
-                {/* Abstract DNA/Circuit pattern */}
-                <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 200 200">
-                  <defs>
-                    <pattern id="dna-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M10,10 Q20,5 30,10 Q20,15 10,10" stroke="currentColor" strokeWidth="1" fill="none"/>
-                      <path d="M10,30 Q20,25 30,30 Q20,35 10,30" stroke="currentColor" strokeWidth="1" fill="none"/>
-                      <line x1="10" y1="10" x2="10" y2="30" stroke="currentColor" strokeWidth="0.5"/>
-                      <line x1="30" y1="10" x2="30" y2="30" stroke="currentColor" strokeWidth="0.5"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#dna-pattern)" className="text-primary"/>
-                </svg>
-                
-                <div className="relative z-10 text-center">
-                  <div className="text-6xl mb-4">🧬</div>
-                  <h3 className="text-xl font-heading font-semibold text-primary mb-2">
-                    Interdisciplinary Excellence
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Where computational thinking meets medical innovation
-                  </p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="bg-secondary/20 rounded-2xl p-6 flex items-center justify-center h-32">
+                  <div className="text-4xl">👥</div>
+                </div>
+                <div className="bg-secondary/20 rounded-2xl p-6 flex items-center justify-center h-32">
+                  <div className="text-4xl">❤️</div>
+                </div>
+              </div>
+              <div className="space-y-4 mt-8">
+                <div className="bg-secondary/20 rounded-2xl p-6 flex items-center justify-center h-32">
+                  <div className="text-4xl">🎯</div>
+                </div>
+                <div className="bg-secondary/20 rounded-2xl p-6 flex items-center justify-center h-32">
+                  <div className="text-4xl">🛡️</div>
                 </div>
               </div>
             </div>
@@ -125,24 +134,49 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* What Makes Us Different */}
       <section className="py-16 bg-secondary/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
+              What Makes Us Different
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {differentiators.map((item, index) => (
+              <Card key={index} className="border-0 shadow-sm bg-white">
+                <CardHeader>
+                  <CardTitle className="text-xl font-heading text-primary">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base leading-relaxed">
+                    {item.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
               Our Values
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide our mission and shape our approach to education and research.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center border-0 shadow-sm bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            {coreValues.map((value, index) => (
+              <Card key={index} className="text-center border-0 shadow-sm bg-white hover-lift transition-all duration-300">
                 <CardHeader className="pb-4">
-                  <div className="text-4xl mb-3">{value.icon}</div>
-                  <CardTitle className="text-xl font-heading text-primary">{value.title}</CardTitle>
+                  <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <span className="text-2xl">{value.icon}</span>
+                  </div>
+                  <CardTitle className="text-lg font-heading text-primary">{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-sm leading-relaxed">
@@ -155,61 +189,27 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team/Contributors */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* FAQ Section */}
+      <section className="py-16 bg-secondary/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
-              Our Contributors
+              Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Vynora is powered by anonymous contributors from academia, industry, and research institutions 
-              who share our vision of advancing healthcare through technology.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center border-0 shadow-sm bg-white hover-lift">
-                <CardHeader className="pb-4">
-                  <div className="text-5xl mb-4">{member.icon}</div>
-                  <CardTitle className="text-xl font-heading text-primary">{member.role}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-sm leading-relaxed">
-                    {member.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-lg border-0 shadow-sm">
+                <AccordionTrigger className="px-6 py-4 text-left font-semibold text-primary hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-4 text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-heading font-semibold mb-6">
-            Join Our Mission
-          </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-            Whether you're a student, researcher, or professional, there are many ways to engage 
-            with our community and contribute to the future of healthcare technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="flex items-center justify-center space-x-2 text-primary-foreground/80">
-              <BookOpen className="h-5 w-5" />
-              <span>Explore our resources</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 text-primary-foreground/80">
-              <Users className="h-5 w-5" />
-              <span>Connect with our community</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 text-primary-foreground/80">
-              <Mail className="h-5 w-5" />
-              <span>Share your insights</span>
-            </div>
-          </div>
+          </Accordion>
         </div>
       </section>
     </div>
