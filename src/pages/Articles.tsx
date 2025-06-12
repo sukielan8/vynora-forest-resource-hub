@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowDown } from 'lucide-react';
@@ -46,7 +45,8 @@ const Articles = () => {
       description: "Natural Language Processing is transforming mental health care, detecting distress, depression, and suicide risk through patterns in speech and text.",
       category: "AI in Healthcare",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&h=250&fit=crop",
+      link: "/articles/mental-health-nlp"
     },
     {
       id: 5,
@@ -55,7 +55,8 @@ const Articles = () => {
       description: "AI-powered prosthetics and algorithm-driven physical therapy are revolutionizing how we restore movement, independence, and quality of life.",
       category: "Biotech Innovations",
       readTime: "12 min read",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop",
+      link: "/articles/smart-prosthetics"
     },
     {
       id: 6,
@@ -64,7 +65,8 @@ const Articles = () => {
       description: "Computer science is transforming how we detect, track, and prevent disease outbreaks — sometimes before a single diagnosis is made.",
       category: "Research Tools",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=400&h=250&fit=crop",
+      link: "/articles/outbreak-prediction"
     },
     {
       id: 7,
@@ -73,88 +75,68 @@ const Articles = () => {
       description: "Artificial intelligence is now embedded in the very fabric of modern surgery, guiding scalpels, interpreting scans, and preventing errors.",
       category: "AI in Healthcare",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=250&fit=crop",
+      link: "/articles/ai-surgery"
     },
     {
       id: 8,
-      title: "Essential Programming Languages Every Pre-Med Student Should Know",
-      date: "March 1, 2025",
-      description: "A comprehensive overview of programming languages that are becoming increasingly important in modern medical practice and research.",
-      category: "CS for Pre-Med",
-      readTime: "7 min read", 
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop"
-    },
-    {
-      id: 9,
       title: "Decoding the Mind: How Algorithms Are Advancing the Fight Against Alzheimer's",
       date: "February 28, 2025",
       description: "Machine learning is uncovering subtle biomarkers in speech, gait, and brain activity to detect neurodegenerative diseases before symptoms appear.",
       category: "AI in Healthcare",
       readTime: "11 min read",
-      image: "https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop",
+      link: "/articles/alzheimers-ai"
     },
     {
-      id: 10,
-      title: "Building Your First Healthcare Chatbot: A Step-by-Step Guide",
-      date: "February 18, 2025",
-      description: "Learn how to create an intelligent chatbot that can assist with basic medical queries using natural language processing and machine learning.",
-      category: "CS for Pre-Med",
-      readTime: "18 min read",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop"
-    },
-    {
-      id: 11,
+      id: 9,
       title: "Rewriting the Heartbeat: How Code Is Saving Lives in Cardiovascular Medicine",
       date: "February 14, 2025",
       description: "Computer science is transforming cardiovascular medicine, from detecting heart rhythms to predicting cardiac events before they happen.",
       category: "AI in Healthcare",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=400&h=250&fit=crop",
+      link: "/articles/cardiovascular-ai"
     },
     {
-      id: 12,
-      title: "Getting Started with Python for Medical Data Analysis",
-      date: "February 5, 2025",
-      description: "A comprehensive beginner's guide to using Python for analyzing medical datasets, from basic statistics to advanced machine learning applications.",
-      category: "CS for Pre-Med",
-      readTime: "15 min read",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop"
-    },
-    {
-      id: 13,
+      id: 10,
       title: "Precision, Not Guesswork: How Algorithms Are Revolutionizing Cancer Detection",
       date: "January 31, 2025",
       description: "AI is becoming one of oncology's most powerful allies, detecting cancer patterns too subtle for even the most trained human eye.",
       category: "AI in Healthcare",
       readTime: "13 min read",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+      link: "/articles/cancer-detection-ai"
     },
     {
-      id: 14,
+      id: 11,
       title: "Signal in the Silence: How Code is Cracking the Mental Health Crisis",
       date: "January 17, 2025",
       description: "Artificial intelligence and machine learning are giving medicine new ways to understand the mind by identifying patterns in speech and behavior.",
       category: "AI in Healthcare",
       readTime: "11 min read",
-      image: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&h=250&fit=crop",
+      link: "/articles/mental-health-ai"
     },
     {
-      id: 15,
+      id: 12,
       title: "Encoded Pulse: How AI and Algorithms Are Quietly Preventing the Next Heart Attack",
       date: "January 3, 2025",
       description: "A single ECG reading may soon predict your long-term heart health so accurately that doctors can act before symptoms emerge.",
       category: "AI in Healthcare",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
+      link: "/articles/heart-attack-prediction"
     },
     {
-      id: 16,
+      id: 13,
       title: "Reprogramming Healthcare: How Computer Science is Quietly Redefining Medicine",
       date: "December 20, 2024",
       description: "From the hospital room to the research lab, algorithms and artificial intelligence are becoming the new instruments of healing.",
       category: "AI in Healthcare",
       readTime: "12 min read",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
+      link: "/articles/cs-redefining-medicine"
     }
   ];
 
