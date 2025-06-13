@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowDown } from 'lucide-react';
@@ -15,7 +16,7 @@ const Articles = () => {
       description: "What if your smartwatch knew you were sick before you did? Wearable biosensors, combined with powerful computer science algorithms, are reshaping how we monitor health in real time.",
       category: "AI in Healthcare",
       readTime: "13 min read",
-      image: "https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&h=250&fit=crop",
       link: "/articles/wearable-biosensors"
     },
     {
@@ -25,7 +26,7 @@ const Articles = () => {
       description: "Imagine a surgeon in New York performing a delicate spinal operation on a patient in Nairobi — in real time. This is the cutting edge of remote surgery.",
       category: "AI in Healthcare",
       readTime: "14 min read",
-      image: "https://images.unsplash.com/photo-1559757175-5dbe4ae54fb2?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1485833077593-4278bba3f11f?w=400&h=250&fit=crop",
       link: "/articles/remote-surgery"
     },
     {
@@ -35,7 +36,7 @@ const Articles = () => {
       description: "Computational models that can design, test, and optimize new medicines faster, cheaper, and more accurately than ever before. Welcome to the future of pharmacology.",
       category: "AI in Healthcare",
       readTime: "12 min read",
-      image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=250&fit=crop",
       link: "/articles/algorithmic-cure"
     },
     {
@@ -45,7 +46,7 @@ const Articles = () => {
       description: "Natural Language Processing is transforming mental health care, detecting distress, depression, and suicide risk through patterns in speech and text.",
       category: "AI in Healthcare",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
       link: "/articles/mental-health-nlp"
     },
     {
@@ -55,7 +56,7 @@ const Articles = () => {
       description: "AI-powered prosthetics and algorithm-driven physical therapy are revolutionizing how we restore movement, independence, and quality of life.",
       category: "Biotech Innovations",
       readTime: "12 min read",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop",
       link: "/articles/smart-prosthetics"
     },
     {
@@ -65,7 +66,7 @@ const Articles = () => {
       description: "Computer science is transforming how we detect, track, and prevent disease outbreaks — sometimes before a single diagnosis is made.",
       category: "Research Tools",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=250&fit=crop",
       link: "/articles/outbreak-prediction"
     },
     {
@@ -75,7 +76,7 @@ const Articles = () => {
       description: "Artificial intelligence is now embedded in the very fabric of modern surgery, guiding scalpels, interpreting scans, and preventing errors.",
       category: "AI in Healthcare",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=250&fit=crop",
       link: "/articles/ai-surgery"
     },
     {
@@ -85,7 +86,7 @@ const Articles = () => {
       description: "Machine learning is uncovering subtle biomarkers in speech, gait, and brain activity to detect neurodegenerative diseases before symptoms appear.",
       category: "AI in Healthcare",
       readTime: "11 min read",
-      image: "https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=400&h=250&fit=crop",
       link: "/articles/alzheimers-ai"
     },
     {
@@ -95,7 +96,7 @@ const Articles = () => {
       description: "Computer science is transforming cardiovascular medicine, from detecting heart rhythms to predicting cardiac events before they happen.",
       category: "AI in Healthcare",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=400&h=250&fit=crop",
       link: "/articles/cardiovascular-ai"
     },
     {
@@ -105,7 +106,7 @@ const Articles = () => {
       description: "AI is becoming one of oncology's most powerful allies, detecting cancer patterns too subtle for even the most trained human eye.",
       category: "AI in Healthcare",
       readTime: "13 min read",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=250&fit=crop",
       link: "/articles/cancer-detection-ai"
     },
     {
@@ -115,7 +116,7 @@ const Articles = () => {
       description: "Artificial intelligence and machine learning are giving medicine new ways to understand the mind by identifying patterns in speech and behavior.",
       category: "AI in Healthcare",
       readTime: "11 min read",
-      image: "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
       link: "/articles/mental-health-ai"
     },
     {
@@ -125,7 +126,7 @@ const Articles = () => {
       description: "A single ECG reading may soon predict your long-term heart health so accurately that doctors can act before symptoms emerge.",
       category: "AI in Healthcare",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=250&fit=crop",
       link: "/articles/heart-attack-prediction"
     },
     {
@@ -135,7 +136,7 @@ const Articles = () => {
       description: "From the hospital room to the research lab, algorithms and artificial intelligence are becoming the new instruments of healing.",
       category: "AI in Healthcare",
       readTime: "12 min read",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop",
       link: "/articles/cs-redefining-medicine"
     }
   ];
@@ -199,7 +200,7 @@ const Articles = () => {
             <Card className="hover-lift border-0 shadow-sm bg-white transition-all duration-300">
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop"
+                  src="https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop"
                   alt="Intro to AI in Medicine"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
@@ -298,25 +299,13 @@ const Articles = () => {
                       <Calendar className="h-3 w-3 mr-1" />
                       {article.date}
                     </div>
-                    {article.link ? (
-                      <Button asChild variant="ghost" size="sm" className="text-xs group-hover:text-primary transition-all duration-300 hover:bg-primary/10">
-                        <Link to={article.link}>
-                          Read Article
-                          <ArrowDown className="ml-1 h-3 w-3 rotate-[-90deg]" />
-                        </Link>
-                      </Button>
-                    ) : (
-                      <Button variant="ghost" size="sm" className="text-xs group-hover:text-primary transition-all duration-300 hover:bg-primary/10">
+                    <Button asChild variant="ghost" size="sm" className="text-xs group-hover:text-primary transition-all duration-300 hover:bg-primary/10">
+                      <Link to={article.link}>
                         Read Article
                         <ArrowDown className="ml-1 h-3 w-3 rotate-[-90deg]" />
-                      </Button>
-                    )}
+                      </Link>
+                    </Button>
                   </div>
-                  {!article.link && (
-                    <div className="mt-3 text-center">
-                      <span className="text-sm text-muted-foreground italic">Content to be uploaded</span>
-                    </div>
-                  )}
                 </CardContent>
               </Card>
             ))}
