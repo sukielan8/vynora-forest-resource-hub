@@ -10,7 +10,7 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'Articles', href: '/articles', icon: BookOpen },
+    { name: 'Resources', href: '/articles', icon: BookOpen },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: Mail },
   ];
@@ -20,13 +20,13 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-23">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300">
             <img 
               src="/lovable-uploads/697238ab-ee46-4ce9-95dd-8a5cb8a8c449.png" 
               alt="Vynora Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
