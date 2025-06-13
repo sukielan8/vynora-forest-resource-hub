@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/vynora-forest-resource-hub/', // ← must match repo name
+  plugins: [react(), tsconfigPaths()],
+  base: '/vynora-forest-resource-hub/',
 })
