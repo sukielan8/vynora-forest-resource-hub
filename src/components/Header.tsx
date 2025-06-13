@@ -24,7 +24,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300">
             <img 
-              src="/lovable-uploads/5022b7e7-4988-4404-9af0-0602508f8538.png" 
+              src="/lovable-uploads/af6a3c09-b2ac-4a73-946a-2d43afb34d9e.png" 
               alt="Vynora Logo" 
               className="h-28 w-auto"
             />
