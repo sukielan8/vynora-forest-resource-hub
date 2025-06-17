@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold text-lg">V</span>
               </div>
-              <span className="text-2xl font-heading font-semibold">Vynora</span>
+              <span className="text-2xl font-heading font-semibold">Vynorra</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed max-w-md">
               Empowering the intersection of computer science and healthcare through comprehensive resources, 
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Vynora. Supporting the future of healthcare technology.
+            © 2024 Vynorra. Supporting the future of healthcare technology.
           </p>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">
             <Mail className="h-4 w-4 text-primary-foreground/60" />
