@@ -1,6 +1,6 @@
 {
   "name": "vite_react_shadcn_ts",
-  "homepage": "https://sukielan8.github.io/vynora-forest-resource-hub/",
+  "homepage": "https://vynorra.org/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,7 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "gh-pages" : "^6.3.0",
+    "gh-pages": "^6.3.0",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
@@ -83,5 +83,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
+  },
+  "overrides": {
+    "lovable-tagger>esbuild": "0.25.0"
   }
 }
