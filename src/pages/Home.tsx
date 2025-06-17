@@ -75,7 +75,7 @@ const Home = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-semibold text-white mb-2 animate-fade-in">
-            Vynora
+            Vynorra
           </h1>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium text-secondary mb-6 animate-fade-in">
             Where Computer Science
@@ -94,7 +94,7 @@ const Home = () => {
             </Button>
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-medium transition-all duration-300 hover:scale-105">
               <Link to="/about">
-                Learn About Vynora
+                Learn About Vynorra
               </Link>
             </Button>
           </div>
