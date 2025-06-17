@@ -52,8 +52,8 @@ const About = () => {
 
   const faqs = [
     {
-      question: "Who runs Vynora?",
-      answer: "We're two high school students with big ambitions and small egos. One of us loves tech. One of us loves medicine. Together, we build Vynora."
+      question: "Who runs Vynorra?",
+      answer: "We're two high school students with big ambitions and small egos. One of us loves tech. One of us loves medicine. Together, we build Vynorra."
     },
     {
       question: "Can I join or collaborate?",
@@ -69,7 +69,7 @@ const About = () => {
     },
     {
       question: "How do you fund your work?",
-      answer: "Currently, Vynora is entirely self-funded and volunteer-run. We keep costs minimal and focus on creating value rather than generating revenue."
+      answer: "Currently, Vynorra is entirely self-funded and volunteer-run. We keep costs minimal and focus on creating value rather than generating revenue."
     }
   ];
 
@@ -79,7 +79,7 @@ const About = () => {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-heading font-semibold mb-6">
-            About Vynora
+            About Vynorra
           </h1>
           <p className="text-xl leading-relaxed opacity-90">
             Where anonymous innovation meets healthcare transformation
@@ -97,7 +97,7 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Vynora is a nonprofit initiative led by two students — one passionate about computer science, the 
+                  Vynorra is a nonprofit initiative led by two students — one passionate about computer science, the 
                   other about medicine. We stay anonymous to prove that anyone, regardless of age or 
                   background, can build something real and impactful.
                 </p>
