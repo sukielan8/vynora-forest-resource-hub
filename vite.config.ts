@@ -9,6 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    outDir: "docs",
+    // you can leave rollupOptions alone
+  },
   plugins: [
     react(),
     mode === 'development' &&
