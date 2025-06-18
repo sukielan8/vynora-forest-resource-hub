@@ -38,7 +38,7 @@ const Contact = () => {
   const contactInfo = [
     {
       title: "Email Us",
-      subtitle: "contact@Vynorra.org",
+      subtitle: "contact.vynorra@gmail.com",
       description: "General inquiries, collaboration ideas, and feedback",
       detail: "For specific questions or project discussions"
     },
