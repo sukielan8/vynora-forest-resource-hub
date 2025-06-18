@@ -200,7 +200,7 @@ const Articles = () => {
             <Card className="hover-lift border-0 shadow-sm bg-white transition-all duration-300">
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1559159663-3670c2428a47?w=400&h=250&fit=crop"
+                  src="https://images.unsplash.com/photo-1747224317356-6dd1a4a078fd?w=400&h=250&fit=crop"
                   alt="Intro to AI in Medicine"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
