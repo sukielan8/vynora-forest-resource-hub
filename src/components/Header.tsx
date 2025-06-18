@@ -26,7 +26,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/af6a3c09-b2ac-4a73-946a-2d43afb34d9e.png" 
               alt="Vynorra Logo" 
-              className="h-28 w-auto"
+              className="h-26 w-auto"
             />
           </Link>
 
