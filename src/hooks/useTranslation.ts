@@ -560,12 +560,7 @@ const translations: Translations = {
     es: 'Todos',
     fr: 'Tous'
   },
-  'common.settings': {
-    en: 'Settings',
-    es: 'Configuración',
-    fr: 'Paramètres'
-  }
-  
+
   // Stay Connected
   'connect.title': {
     en: 'Stay Connected',
