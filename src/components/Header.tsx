@@ -3,16 +3,20 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, BookOpen, Users, Mail, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/hooks/useTranslation';
+import LanguageSelector from './LanguageSelector';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Resources', href: '/articles', icon: BookOpen },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Mail },
+    { name: t('nav.home'), href: '/', icon: Home },
+    { name: t('nav.resources'), href: '/articles', icon: BookOpen },
+    { name: t('nav.about'), href: '/about', icon: Users },
+    { name: t('nav.contact'), href: '/contact', icon: Mail },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -46,6 +50,12 @@ const Header = () => {
                 }`} />
               </Link>
             ))}
+            
+            {/* Theme and Language Controls */}
+            <div className="flex items-center space-x-2 ml-4">
+              <ThemeToggle />
+              <LanguageSelector />
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -78,6 +88,15 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Theme and Language Controls */}
+              <div className="flex items-center justify-between px-3 py-2 border-t border-border mt-2 pt-4">
+                <span className="text-sm font-medium text-muted-foreground">Settings</span>
+                <div className="flex items-center space-x-2">
+                  <ThemeToggle />
+                  <LanguageSelector />
+                </div>
+              </div>
             </div>
           </div>
         )}

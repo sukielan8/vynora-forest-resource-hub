@@ -4,30 +4,33 @@ import { ArrowDown, BookOpen, Calendar, Mail, Users, Shield, Eye } from 'lucide-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const featuredResources = [
     {
-      title: "AI in Healthcare",
-      description: "Explore cutting-edge applications of artificial intelligence in medical diagnosis and treatment.",
+      title: t('resources.ai.title'),
+      description: t('resources.ai.description'),
       icon: "🧠",
       link: "/articles"
     },
     {
-      title: "CS for Pre-Med",
-      description: "Bridge computer science and medicine with our comprehensive academic guidance.",
+      title: t('resources.premed.title'),
+      description: t('resources.premed.description'),
       icon: "⚕️",
       link: "/articles"
     },
     {
-      title: "Biotech Innovations",
-      description: "Stay updated on the latest breakthroughs in biotechnology and computational biology.",
+      title: t('resources.biotech.title'),
+      description: t('resources.biotech.description'),
       icon: "🧬",
       link: "/articles"
     },
     {
-      title: "Research Tools",
-      description: "Access essential tools and methodologies for interdisciplinary research.",
+      title: t('resources.tools.title'),
+      description: t('resources.tools.description'),
       icon: "🔬",
       link: "/articles"
     }
@@ -75,26 +78,24 @@ const Home = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-semibold text-white mb-2 animate-fade-in">
-            Vynorra
+            {t('home.title')}
           </h1>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-medium text-secondary mb-6 animate-fade-in">
-            Where Computer Science
-            <span className="block text-secondary">Meets Healthcare</span>
+            {t('home.subtitle')}
           </h2>
           <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up">
-            Discover comprehensive resources for the intersection of technology and medicine. 
-            From AI applications to pre-med programming guides.
+            {t('home.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-medium transition-all duration-300 hover:scale-105">
               <Link to="/articles">
                 <BookOpen className="mr-2 h-5 w-5" />
-                Explore Resources
+                {t('home.explore')}
               </Link>
             </Button>
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-medium transition-all duration-300 hover:scale-105">
               <Link to="/about">
-                Learn About Vynorra
+                {t('home.learn')}
               </Link>
             </Button>
           </div>
@@ -113,11 +114,10 @@ const Home = () => {
       <section id="core-mission" className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-6">
-            Our Core Mission
+            {t('home.mission.title')}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            To use technology and creativity to improve access to health knowledge, spark innovation,
-            and empower the next generation of students to shape the future of care.
+            {t('home.mission.description')}
           </p>
         </div>
       </section>
@@ -127,10 +127,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
-              Featured Resources
+              {t('resources.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our curated collection of resources at the intersection of computer science and healthcare.
+              {t('resources.description')}
             </p>
           </div>
 
@@ -146,7 +146,7 @@ const Home = () => {
                     {resource.description}
                   </CardDescription>
                   <Button asChild variant="outline" size="sm" className="w-full transition-all duration-300 hover:bg-primary hover:text-white">
-                    <Link to={resource.link}>Explore</Link>
+                    <Link to={resource.link}>{t('common.explore')}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -161,15 +161,14 @@ const Home = () => {
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/2">
               <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-6">
-                Latest Articles
+                {t('articles.title')}
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Stay updated with the latest insights, research, and developments in healthcare technology. 
-                Our articles cover everything from practical programming guides to cutting-edge research analysis.
+                {t('articles.description')}
               </p>
               <Button asChild variant="outline" className="transition-all duration-300 hover:bg-primary hover:text-white">
                 <Link to="/articles">
-                  View All Articles
+                  {t('articles.viewAll')}
                   <ArrowDown className="ml-2 h-4 w-4 rotate-[-90deg]" />
                 </Link>
               </Button>
@@ -227,19 +226,19 @@ const Home = () => {
       <section className="py-16 bg-secondary text-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            Stay Connected
+            {t('connect.title')}
           </h2>
           <p className="text-lg mb-8 leading-relaxed opacity-90">
-            Get updates on our latest projects and insights. No spam. Unsubscribe anytime.
+            {t('connect.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder={t('common.email')}
               className="bg-white text-primary"
             />
             <Button className="bg-primary text-white hover:bg-primary/90 transition-all duration-300">
-              Subscribe
+              {t('common.subscribe')}
             </Button>
           </div>
         </div>

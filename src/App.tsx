@@ -5,6 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AppProvider } from "@/contexts/AppContext";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
@@ -28,37 +29,39 @@ import CSRedefiningMedicine from "./pages/articles/CSRedefiningMedicine";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/articles/algorithmic-cure" element={<AlgorithmicCure />} />
-            <Route path="/articles/remote-surgery" element={<RemoteSurgery />} />
-            <Route path="/articles/wearable-biosensors" element={<WearableBiosensors />} />
-            <Route path="/articles/mental-health-nlp" element={<MentalHealthNLP />} />
-            <Route path="/articles/smart-prosthetics" element={<SmartProsthetics />} />
-            <Route path="/articles/outbreak-prediction" element={<OutbreakPrediction />} />
-            <Route path="/articles/ai-surgery" element={<AISurgery />} />
-            <Route path="/articles/alzheimers-ai" element={<AlzheimersAI />} />
-            <Route path="/articles/cardiovascular-ai" element={<CardiovascularAI />} />
-            <Route path="/articles/cancer-detection-ai" element={<CancerDetectionAI />} />
-            <Route path="/articles/mental-health-ai" element={<MentalHealthAI />} />
-            <Route path="/articles/heart-attack-prediction" element={<HeartAttackPrediction />} />
-            <Route path="/articles/cs-redefining-medicine" element={<CSRedefiningMedicine />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <AppProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/articles" element={<Articles />} />
+              <Route path="/articles/algorithmic-cure" element={<AlgorithmicCure />} />
+              <Route path="/articles/remote-surgery" element={<RemoteSurgery />} />
+              <Route path="/articles/wearable-biosensors" element={<WearableBiosensors />} />
+              <Route path="/articles/mental-health-nlp" element={<MentalHealthNLP />} />
+              <Route path="/articles/smart-prosthetics" element={<SmartProsthetics />} />
+              <Route path="/articles/outbreak-prediction" element={<OutbreakPrediction />} />
+              <Route path="/articles/ai-surgery" element={<AISurgery />} />
+              <Route path="/articles/alzheimers-ai" element={<AlzheimersAI />} />
+              <Route path="/articles/cardiovascular-ai" element={<CardiovascularAI />} />
+              <Route path="/articles/cancer-detection-ai" element={<CancerDetectionAI />} />
+              <Route path="/articles/mental-health-ai" element={<MentalHealthAI />} />
+              <Route path="/articles/heart-attack-prediction" element={<HeartAttackPrediction />} />
+              <Route path="/articles/cs-redefining-medicine" element={<CSRedefiningMedicine />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </AppProvider>
 );
 
 export default App;
