@@ -144,7 +144,6 @@ const Articles = () => {
   ];
 
   const categories = ["All", "AI in Healthcare", "CS for Pre-Med", "Biotech Innovations", "Research Tools"];
-  const { t } = useTranslation();
 
   const translatedCategories = [
     t('common.all'),
