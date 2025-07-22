@@ -1,8 +1,11 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const About = () => {
+  const { t } = useTranslation();
+
   const coreValues = [
     {
       icon: "🌿",
@@ -79,10 +82,10 @@ const About = () => {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-heading font-semibold mb-6">
-            About Vynorra
+            {t('about.title')}
           </h1>
           <p className="text-xl leading-relaxed opacity-90">
-            Where anonymous innovation meets healthcare transformation
+            {t('about.subtitle')}
           </p>
         </div>
       </section>
@@ -93,7 +96,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-heading font-semibold text-primary mb-6">
-                Who We Are
+                {t('about.whoWeAre.title')}
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
@@ -139,7 +142,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
-              What Makes Us Different
+              {t('about.different.title')}
             </h2>
           </div>
 
@@ -165,7 +168,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
-              Our Values
+              {t('about.values.title')}
             </h2>
           </div>
 
@@ -194,7 +197,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
-              Frequently Asked Questions
+              {t('about.faq.title')}
             </h2>
           </div>
 

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { Calendar, ArrowDown } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Articles = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const { t } = useTranslation();
 
   const articles = [
     {
@@ -142,10 +144,28 @@ const Articles = () => {
   ];
 
   const categories = ["All", "AI in Healthcare", "CS for Pre-Med", "Biotech Innovations", "Research Tools"];
+  const { t } = useTranslation();
 
-  const filteredArticles = activeCategory === "All" 
+  const translatedCategories = [
+    t('common.all'),
+    t('category.aiHealthcare'),
+    t('category.csPremed'),
+    t('category.biotechInnovations'),
+    t('category.researchTools')
+  ];
+
+  const categoryMap = {
+    [t('common.all')]: "All",
+    [t('category.aiHealthcare')]: "AI in Healthcare",
+    [t('category.csPremed')]: "CS for Pre-Med",
+    [t('category.biotechInnovations')]: "Biotech Innovations",
+    [t('category.researchTools')]: "Research Tools"
+  };
+
+  const actualCategory = categoryMap[activeCategory] || activeCategory;
+  const filteredArticles = actualCategory === "All" 
     ? articles 
-    : articles.filter(article => article.category === activeCategory);
+    : articles.filter(article => article.category === actualCategory);
 
   return (
     <div className="min-h-screen bg-white">
@@ -154,11 +174,10 @@ const Articles = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-heading font-semibold text-primary mb-6">
-              Articles & Resources
+              {t('articles.page.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Explore our comprehensive collection of articles covering the intersection of computer science and healthcare. 
-              From technical tutorials to research insights.
+              {t('articles.page.description')}
             </p>
           </div>
         </div>
@@ -169,7 +188,7 @@ const Articles = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-heading font-semibold text-primary mb-4">
-              Featured Projects
+              {t('articles.featured.title')}
             </h2>
           </div>
           
@@ -185,7 +204,7 @@ const Articles = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                   <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
-                    Coming Soon
+                    {t('project.comingSoon')}
                   </span>
                 </div>
                 <CardTitle className="text-lg font-heading">Health Habit Tracker</CardTitle>
@@ -208,7 +227,7 @@ const Articles = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                   <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
-                    In Progress
+                    {t('project.inProgress')}
                   </span>
                 </div>
                 <CardTitle className="text-lg font-heading">Intro to AI in Medicine</CardTitle>
@@ -231,7 +250,7 @@ const Articles = () => {
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">
                   <span className="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full font-medium">
-                    Planning
+                    {t('project.planning')}
                   </span>
                 </div>
                 <CardTitle className="text-lg font-heading">CS for Future Doctors</CardTitle>
@@ -250,7 +269,7 @@ const Articles = () => {
       <section className="py-8 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
+            {translatedCategories.map((category) => (
               <Button
                 key={category}
                 variant={category === activeCategory ? "default" : "outline"}
@@ -301,7 +320,7 @@ const Articles = () => {
                     </div>
                     <Button asChild variant="ghost" size="sm" className="text-xs group-hover:text-primary transition-all duration-300 hover:bg-primary/10">
                       <Link to={article.link}>
-                        Read Article
+                        {t('articles.readArticle')}
                         <ArrowDown className="ml-1 h-3 w-3 rotate-[-90deg]" />
                       </Link>
                     </Button>
@@ -317,7 +336,7 @@ const Articles = () => {
       <section className="py-8 border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Button variant="outline" size="lg" className="transition-all duration-300 hover:bg-primary hover:text-white">
-            Load More Articles
+            {t('articles.loadMore')}
           </Button>
         </div>
       </section>

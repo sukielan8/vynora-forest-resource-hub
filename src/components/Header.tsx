@@ -91,7 +91,7 @@ const Header = () => {
               
               {/* Mobile Theme and Language Controls */}
               <div className="flex items-center justify-between px-3 py-2 border-t border-border mt-2 pt-4">
-                <span className="text-sm font-medium text-muted-foreground">Settings</span>
+                <span className="text-sm font-medium text-muted-foreground">{t('common.settings')}</span>
                 <div className="flex items-center space-x-2">
                   <ThemeToggle />
                   <LanguageSelector />

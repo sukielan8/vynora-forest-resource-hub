@@ -8,8 +8,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -64,11 +66,10 @@ const Contact = () => {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-heading font-semibold mb-6">
-            Get In Touch
+            {t('contact.title')}
           </h1>
           <p className="text-xl leading-relaxed opacity-90">
-            Have a question or idea? Want to collaborate? We'd love to hear from you. Drop
-            us a message and we'll get back to you soon.
+            {t('contact.subtitle')}
           </p>
         </div>
       </section>
@@ -80,7 +81,7 @@ const Contact = () => {
             {/* Left Side - Contact Info */}
             <div className="space-y-8">
               <h2 className="text-2xl font-heading font-semibold text-primary">
-                Let's Start a Conversation
+                {t('contact.conversation.title')}
               </h2>
 
               <div className="space-y-6">
@@ -141,33 +142,33 @@ const Contact = () => {
             <div>
               <Card className="border-0 shadow-sm bg-white">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-heading text-primary">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl font-heading text-primary">{t('contact.form.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="fullName">Full Name</Label>
+                        <Label htmlFor="fullName">{t('contact.form.name')}</Label>
                         <Input
                           id="fullName"
                           name="fullName"
                           type="text"
                           value={formData.fullName}
                           onChange={handleInputChange}
-                          placeholder="Your name"
+                          placeholder={t('contact.form.namePlaceholder')}
                           required
                           className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
+                        <Label htmlFor="email">{t('contact.form.email')}</Label>
                         <Input
                           id="email"
                           name="email"
                           type="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="your.email@example.com"
+                          placeholder={t('contact.form.emailPlaceholder')}
                           required
                           className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
                         />
@@ -175,7 +176,7 @@ const Contact = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
+                      <Label htmlFor="subject">{t('contact.form.subject')}</Label>
                       <Select>
                         <SelectTrigger className="transition-all duration-300 focus:ring-2 focus:ring-primary/20">
                           <SelectValue placeholder="Choose a topic..." />
@@ -191,13 +192,13 @@ const Contact = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
+                      <Label htmlFor="message">{t('contact.form.message')}</Label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Tell us about your question, idea, or how we can help..."
+                        placeholder={t('contact.form.messagePlaceholder')}
                         rows={5}
                         required
                         className="transition-all duration-300 focus:ring-2 focus:ring-primary/20"
@@ -206,7 +207,7 @@ const Contact = () => {
                     
                     <Button type="submit" className="w-full transition-all duration-300 hover:scale-105">
                       <Send className="mr-2 h-4 w-4" />
-                      Send Message
+                      {t('contact.form.send')}
                     </Button>
                   </form>
                   
@@ -227,7 +228,7 @@ const Contact = () => {
       <section className="py-16 bg-secondary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-heading font-semibold text-primary mb-4">
-            Our Commitment to Privacy
+            {t('contact.privacy.title')}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             As an anonymous organization, we understand the importance of privacy. We only collect information 

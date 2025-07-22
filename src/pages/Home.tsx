@@ -45,11 +45,11 @@ const Home = () => {
   ];
 
   const impactNumbers = [
-    { number: "231", label: "Website Visitors" },
-    { number: "2", label: "Projects Launched" },
-    { number: "580+", label: "Blog Reads" },
-    { number: "12", label: "Workshop Attendees" },
-    { number: "46", label: "Tool Downloads" }
+    { number: "231", label: t('home.impact.visitors') },
+    { number: "2", label: t('home.impact.projects') },
+    { number: "580+", label: t('home.impact.reads') },
+    { number: "12", label: t('home.impact.attendees') },
+    { number: "46", label: t('home.impact.downloads') }
   ];
 
   const scrollToContent = () => {
@@ -207,7 +207,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-heading font-semibold text-primary mb-4">
-              Our Growing Impact
+              {t('home.impact.title')}
             </h2>
           </div>
 
