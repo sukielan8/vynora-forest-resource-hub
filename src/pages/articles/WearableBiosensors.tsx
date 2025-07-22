@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const WearableBiosensors = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -11,19 +14,19 @@ const WearableBiosensors = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            The Pulse of the Future: How Wearable Biosensors Are Rewiring Preventive Medicine
+            {t('article.wearableBiosensors.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, June 6th, 2025
+              {t('article.wearableBiosensors.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              13 min read
+              {t('article.wearableBiosensors.readTime')}
             </div>
           </div>
         </div>
@@ -78,7 +81,7 @@ const WearableBiosensors = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>Mishra, T., et al. "Pre-symptomatic detection of COVID-19 from smartwatch data." Nature Biomedical Engineering, 2020.</li>
                 <li>Radin, J. M., et al. "Harnessing wearable device data to improve state-level real-time surveillance of influenza-like illness in the USA." The Lancet Digital Health, 2020.</li>

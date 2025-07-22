@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const AlgorithmicCure = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -11,19 +14,19 @@ const AlgorithmicCure = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            The Algorithmic Cure: How AI is Redesigning Drug Discovery from Code to Cure
+            {t('article.algorithmicCure.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, May 9th, 2025
+              {t('article.algorithmicCure.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              12 min read
+              {t('article.algorithmicCure.readTime')}
             </div>
           </div>
         </div>
@@ -74,7 +77,7 @@ const AlgorithmicCure = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>Jumper, J., et al. "Highly accurate protein structure prediction with AlphaFold." Nature, 2021.</li>
                 <li>Stokes, J. M., et al. "A deep learning approach to antibiotic discovery." Cell, 2020.</li>

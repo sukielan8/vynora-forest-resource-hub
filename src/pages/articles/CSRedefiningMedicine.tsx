@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const CSRedefiningMedicine = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -11,19 +14,19 @@ const CSRedefiningMedicine = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            Reprogramming Healthcare: How Computer Science is Quietly Redefining Medicine
+            {t('article.csRedefiningMedicine.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, December 20th, 2024
+              {t('article.csRedefiningMedicine.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              12 min read
+              {t('article.csRedefiningMedicine.readTime')}
             </div>
           </div>
         </div>
@@ -94,7 +97,7 @@ const CSRedefiningMedicine = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>McKinney, S. M., et al. "International evaluation of an AI system for breast cancer screening." Nature, 2020.</li>
                 <li>Senior, A. W., et al. "Improved protein structure prediction using potentials from deep learning." Nature, 2020.</li>

@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const HeartAttackPrediction = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -11,19 +14,19 @@ const HeartAttackPrediction = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            Encoded Pulse: How AI and Algorithms Are Quietly Preventing the Next Heart Attack
+            {t('article.heartAttackPrediction.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, January 3rd, 2025
+              {t('article.heartAttackPrediction.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              10 min read
+              {t('article.heartAttackPrediction.readTime')}
             </div>
           </div>
         </div>
@@ -90,7 +93,7 @@ const HeartAttackPrediction = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>Attia, Z. I., et al. "Screening for cardiac contractile dysfunction using an artificial intelligence–enabled electrocardiogram." Nature Medicine, 2019.</li>
                 <li>Poplin, R., et al. "Prediction of cardiovascular risk factors from retinal fundus photographs via deep learning." Nature Biomedical Engineering, 2018.</li>

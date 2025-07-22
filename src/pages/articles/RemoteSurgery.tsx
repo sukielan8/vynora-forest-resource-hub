@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const RemoteSurgery = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -11,19 +14,19 @@ const RemoteSurgery = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            Scalpel, Stream, Success: How Robotics and Remote Surgery Are Reprogramming the Operating Room
+            {t('article.remoteSurgery.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, May 23rd, 2025
+              {t('article.remoteSurgery.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              14 min read
+              {t('article.remoteSurgery.readTime')}
             </div>
           </div>
         </div>
@@ -78,7 +81,7 @@ const RemoteSurgery = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>Marescaux, J., et al. "Transatlantic robot-assisted telesurgery." Nature, 2001.</li>
                 <li>Tian, W., et al. "5G-based remote robotic spinal surgery: First clinical application." Spine, 2020.</li>

@@ -2,28 +2,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const CancerDetectionAI = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <section className="bg-primary text-primary-foreground py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link to="/articles" className="inline-flex items-centers text-secondary hover:text-white transition-colors duration-300 mb-6">
+          <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            Precision, Not Guesswork: How Algorithms Are Revolutionizing Cancer Detection
+            {t('article.cancerDetectionAI.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, January 31st, 2025
+              {t('article.cancerDetectionAI.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              13 min read
+              {t('article.cancerDetectionAI.readTime')}
             </div>
           </div>
         </div>
@@ -90,7 +93,7 @@ const CancerDetectionAI = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>McKinney, S. M., et al. "International evaluation of an AI system for breast cancer screening." Nature, 2020.</li>
                 <li>Esteva, A., et al. "Dermatologist-level classification of skin cancer with deep neural networks." Nature, 2017.</li>

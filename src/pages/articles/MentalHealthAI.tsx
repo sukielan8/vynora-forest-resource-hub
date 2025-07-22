@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const MentalHealthAI = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -11,19 +14,19 @@ const MentalHealthAI = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link to="/articles" className="inline-flex items-center text-secondary hover:text-white transition-colors duration-300 mb-6">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Articles
+            {t('article.backToArticles')}
           </Link>
           <h1 className="text-3xl sm:text-4xl font-heading font-semibold mb-4">
-            Signal in the Silence: How Code is Cracking the Mental Health Crisis
+            {t('article.mentalHealthAI.title')}
           </h1>
           <div className="flex items-center gap-4 text-secondary">
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
-              Friday, January 17th, 2025
+              {t('article.mentalHealthAI.date')}
             </div>
             <div className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              11 min read
+              {t('article.mentalHealthAI.readTime')}
             </div>
           </div>
         </div>
@@ -90,7 +93,7 @@ const MentalHealthAI = () => {
             </p>
 
             <div className="border-t border-border pt-8">
-              <h3 className="text-lg font-heading font-semibold mb-4">Citations:</h3>
+              <h3 className="text-lg font-heading font-semibold mb-4">{t('article.citations')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>Jacobson, N. C., et al. "Digital biomarkers of mental health: Development and validation of a comprehensive framework." Journal of Medical Internet Research, 2019.</li>
                 <li>Pisano, E. D., et al. "Crisis Text Line: Providing mental health support through technology." Suicide and Life-Threatening Behavior, 2016.</li>
