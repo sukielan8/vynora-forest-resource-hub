@@ -564,7 +564,6 @@ const translations: Translations = {
     en: 'Settings',
     es: 'Configuración',
     fr: 'Paramètres'
-  },
   
   // Stay Connected
   'connect.title': {

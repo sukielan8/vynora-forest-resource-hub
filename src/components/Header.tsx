@@ -5,7 +5,6 @@ import { Menu, X, BookOpen, Users, Mail, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
 import LanguageSelector from './LanguageSelector';
-import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +52,6 @@ const Header = () => {
             
             {/* Theme and Language Controls */}
             <div className="flex items-center space-x-2 ml-4">
-              <ThemeToggle />
               <LanguageSelector />
             </div>
           </nav>
@@ -93,7 +91,6 @@ const Header = () => {
               <div className="flex items-center justify-between px-3 py-2 border-t border-border mt-2 pt-4">
                 <span className="text-sm font-medium text-muted-foreground">{t('common.settings')}</span>
                 <div className="flex items-center space-x-2">
-                  <ThemeToggle />
                   <LanguageSelector />
                 </div>
               </div>
